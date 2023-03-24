@@ -4,8 +4,8 @@ using namespace std;
 class CFraction
 {
 private:
-	int numerator;
-	int denominator;
+	int Numerator;
+	int Denominator;
 public:
 	void InputF();
 	void Checker();
@@ -14,33 +14,33 @@ public:
 int main()
 {
 	cout << "Problem 01: Code a program enters a fraction. Check if it is a positive one, a negative one or its value is zero." << endl;
-	CFraction f;
+	CFraction f{};
 	f.InputF();
 	f.Checker();
-	return 1206;
+	return 0;
 }
 
 void CFraction::InputF()
 {
 	cout << "\nEnter the numerator: ";
-	cin >> numerator;
+	cin >> Numerator;
 	cout << "Enter the denominator: ";
-	cin >> denominator;
-	while (denominator == 0)
+	cin >> Denominator;
+	while (Denominator == 0)
 	{
-		cout << "The denominator must be an integer other than 0. Please re-enter the denominator." << endl;
+		cout << "The denominator must be an integer other than 0. Please re-enter the Denominator." << endl;
 		cout << "Enter the denominator: ";
-		cin >> denominator;
+		cin >> Denominator;
 	}
 }
 
 void CFraction::Checker()
 {
-	float result = (float)numerator / denominator;
+	float result = (float)Numerator / Denominator;
 	if (result > 0)
-		cout << endl << numerator << "/" << denominator << " is a positive fraction." << endl;
+		cout << endl << Numerator << "/" << Denominator << " is a positive fraction." << endl;
 	if (result < 0)
-		cout << endl << numerator << "/" << denominator << " is a negative fraction." << endl;
+		cout << endl << Numerator << "/" << Denominator << " is a negative fraction." << endl;
 	if (result == 0)
-		cout << endl << numerator << "/" << denominator << " = 0." << endl;
+		cout << endl << Numerator << "/" << Denominator << " = 0." << endl;
 }

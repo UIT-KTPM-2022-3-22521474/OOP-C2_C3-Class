@@ -6,8 +6,8 @@ int GCD(int, int);
 class CFraction
 {
 private:
-	int numerator;
-	int denominator;
+	int Numerator;
+	int Denominator;
 public:
 	void InputF();
 	void Irreducible();
@@ -33,7 +33,7 @@ int main()
 	F1.Diff(F2);
 	F1.Pro(F2);
 	F1.Quote(F2);
-	return 1206;
+	return 0;
 }
 
 int GCD(int n1, int n2)
@@ -46,96 +46,96 @@ int GCD(int n1, int n2)
 void CFraction::InputF()
 {
 	cout << "\nEnter the numerator: ";
-	cin >> numerator;
+	cin >> Numerator;
 	cout << "Enter the denominator: ";
-	cin >> denominator;
-	while (denominator == 0)
+	cin >> Denominator;
+	while (Denominator == 0)
 	{
 		cout << "The denominator must be an integer other than 0. Please re-enter the denominator." << endl;
 		cout << "Enter the denominator: ";
-		cin >> denominator;
+		cin >> Denominator;
 	}
 }
 
 void CFraction::Irreducible()
 {
-	int gcd = GCD(numerator, denominator);
-	numerator /= gcd;
-	denominator /= gcd;
+	int gcd = GCD(Numerator, Denominator);
+	Numerator /= gcd;
+	Denominator /= gcd;
 }
 void CFraction::Sum(CFraction F2)
 {
 	CFraction sum{};
-	sum.numerator = F2.denominator * numerator + denominator * F2.numerator;
-	sum.denominator = denominator * F2.denominator;
-	double s = (double)sum.numerator / sum.denominator;
+	sum.Numerator = F2.Denominator * Numerator + Denominator * F2.Numerator;
+	sum.Denominator = Denominator * F2.Denominator;
+	double s = (double)sum.Numerator / sum.Denominator;
 	sum.Irreducible();
 	if (s == (int)s)
 		cout << "\nSum of 2 inputted fraction is:		" << s << "." << endl;
 	else
 	{
-		if (sum.denominator < 0)
+		if (sum.Denominator < 0)
 		{
-			sum.numerator = -sum.numerator;
-			sum.denominator = -sum.denominator;
+			sum.Numerator = -sum.Numerator;
+			sum.Denominator = -sum.Denominator;
 		}
-		cout << "\nSum of 2 inputted fraction is:		" << sum.numerator << "/" << sum.denominator << "." << endl;
+		cout << "\nSum of 2 inputted fraction is:		" << sum.Numerator << "/" << sum.Denominator << "." << endl;
 	}
 }
 void CFraction::Diff(CFraction F2)
 {
 	CFraction diff{};
-	diff.numerator = F2.denominator * numerator - denominator * F2.numerator;
-	diff.denominator = denominator * F2.denominator;
-	double d = (double)diff.numerator / diff.denominator;
+	diff.Numerator = F2.Denominator * Numerator - Denominator * F2.Numerator;
+	diff.Denominator = Denominator * F2.Denominator;
+	double d = (double)diff.Numerator / diff.Denominator;
 	diff.Irreducible();
 	if (d == (int)d)
 		cout << "Difference of 2 inputted fraction is:	" << d << "." << endl;
 	else
 	{
-		if (diff.denominator < 0)
+		if (diff.Denominator < 0)
 		{
-			diff.numerator = -diff.numerator;
-			diff.denominator = -diff.denominator;
+			diff.Numerator = -diff.Numerator;
+			diff.Denominator = -diff.Denominator;
 		}
-		cout << "Difference of 2 inputted fraction is:	" << diff.numerator << "/" << diff.denominator << "." << endl;
+		cout << "Difference of 2 inputted fraction is:	" << diff.Numerator << "/" << diff.Denominator << "." << endl;
 	}
 }
 void CFraction::Pro(CFraction F2)
 {
 	CFraction pro{};
-	pro.numerator = numerator * F2.numerator;
-	pro.denominator = denominator * F2.denominator;
-	double p = (double)pro.numerator / pro.denominator;
+	pro.Numerator = Numerator * F2.Numerator;
+	pro.Denominator = Denominator * F2.Denominator;
+	double p = (double)pro.Numerator / pro.Denominator;
 	pro.Irreducible();
 	if (p == (int)p)
 		cout << "Product of 2 inputted fraction is:	" << p << "." << endl;
 	else
 	{
-		if (pro.denominator < 0)
+		if (pro.Denominator < 0)
 		{
-			pro.numerator = -pro.numerator;
-			pro.denominator = -pro.denominator;
+			pro.Numerator = -pro.Numerator;
+			pro.Denominator = -pro.Denominator;
 		}
-		cout << "Product of 2 inputted fraction is:	" << pro.numerator << "/" << pro.denominator << "." << endl;
+		cout << "Product of 2 inputted fraction is:	" << pro.Numerator << "/" << pro.Denominator << "." << endl;
 	}
 }
 void CFraction::Quote(CFraction F2)
 {
 	CFraction quote{};
-	quote.numerator = numerator * F2.denominator;
-	quote.denominator = denominator * F2.numerator;
-	double q = (double)quote.numerator / quote.denominator;
+	quote.Numerator = Numerator * F2.Denominator;
+	quote.Denominator = Denominator * F2.Numerator;
+	double q = (double)quote.Numerator / quote.Denominator;
 	quote.Irreducible();
 	if (q == (int)q)
 		cout << "Quotient of 2 inputted fraction is:	" << q << "." << endl;
 	else
 	{
-		if (quote.denominator < 0)
+		if (quote.Denominator < 0)
 		{
-			quote.numerator = -quote.numerator;
-			quote.denominator = -quote.denominator;
+			quote.Numerator = -quote.Numerator;
+			quote.Denominator = -quote.Denominator;
 		}
-		cout << "Quotient of 2 inputted fraction is:	" << quote.numerator << "/" << quote.denominator << "." << endl;
+		cout << "Quotient of 2 inputted fraction is:	" << quote.Numerator << "/" << quote.Denominator << "." << endl;
 	}
 }

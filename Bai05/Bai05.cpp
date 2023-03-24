@@ -4,8 +4,8 @@ using namespace std;
 class CComplexNum
 {
 private:
-	float real;
-	float imaginary;
+	float Real;
+	float Imaginary;
 public:
 	void InputCN();
 	void Sum(CComplexNum);
@@ -26,66 +26,66 @@ int main()
 	CN1.Diff(CN2);
 	CN1.Pro(CN2);
 	CN1.Quote(CN2);
-	return 1206;
+	return 0;
 }
 
 void CComplexNum::InputCN()
 {
 	cout << "\nEnter the real part of the number:		";
-	cin >> real;
+	cin >> Real;
 	cout << "Enter the imaginary part of the number:		";
-	cin >> imaginary;
+	cin >> Imaginary;
 }
 
 void CComplexNum::Sum(CComplexNum CN2)
 {
 	CComplexNum sum{};
-	sum.real = real + CN2.real;
-	sum.imaginary = imaginary + CN2.imaginary;
-	if (sum.imaginary < 0)
+	sum.Real = Real + CN2.Real;
+	sum.Imaginary = Imaginary + CN2.Imaginary;
+	if (sum.Imaginary < 0)
 	{
-		sum.imaginary = -sum.imaginary;
-		cout << "\nSum of 2 inputted complex number is:		" << sum.real << " - " << sum.imaginary << "i." << endl;
+		sum.Imaginary = -sum.Imaginary;
+		cout << "\nSum of 2 inputted complex number is:		" << sum.Real << " - " << sum.Imaginary << "i." << endl;
 	}
 	else
-		cout << "\nSum of 2 inputted complex number is:		" << sum.real << " + " << sum.imaginary << "i." << endl;
+		cout << "\nSum of 2 inputted complex number is:		" << sum.Real << " + " << sum.Imaginary << "i." << endl;
 }
 void CComplexNum::Diff(CComplexNum CN2)
 {
 	CComplexNum diff{};
-	diff.real = real - CN2.real;
-	diff.imaginary = imaginary - CN2.imaginary;
-	if (diff.imaginary < 0)
+	diff.Real = Real - CN2.Real;
+	diff.Imaginary = Imaginary - CN2.Imaginary;
+	if (diff.Imaginary < 0)
 	{
-		diff.imaginary = -diff.imaginary;
-		cout << "Difference of 2 inputted complex number is:	" << diff.real << " - " << diff.imaginary << "i." << endl;
+		diff.Imaginary = -diff.Imaginary;
+		cout << "Difference of 2 inputted complex number is:	" << diff.Real << " - " << diff.Imaginary << "i." << endl;
 	}
 	else
-		cout << "Difference of 2 inputted complex number is:	" << diff.real << " + " << diff.imaginary << "i." << endl;
+		cout << "Difference of 2 inputted complex number is:	" << diff.Real << " + " << diff.Imaginary << "i." << endl;
 }
 void CComplexNum::Pro(CComplexNum CN2)
 {
 	CComplexNum pro{};
-	pro.real = real * CN2.real - imaginary * CN2.imaginary;
-	pro.imaginary = real * CN2.imaginary + imaginary * CN2.real;
-	if (pro.imaginary < 0)
+	pro.Real = Real * CN2.Real - Imaginary * CN2.Imaginary;
+	pro.Imaginary = Real * CN2.Imaginary + Imaginary * CN2.Real;
+	if (pro.Imaginary < 0)
 	{
-		pro.imaginary = -pro.imaginary;
-		cout << "Product of 2 inputted complex number is:	" << pro.real << " - " << pro.imaginary << "i." << endl;
+		pro.Imaginary = -pro.Imaginary;
+		cout << "Product of 2 inputted complex number is:	" << pro.Real << " - " << pro.Imaginary << "i." << endl;
 	}
 	else
-		cout << "Product of 2 inputted complex number is:	" << pro.real << " + " << pro.imaginary << "i." << endl;
+		cout << "Product of 2 inputted complex number is:	" << pro.Real << " + " << pro.Imaginary << "i." << endl;
 }
 void CComplexNum::Quote(CComplexNum CN2)
 {
 	CComplexNum quote{};
-	quote.real = (real * CN2.real + imaginary * CN2.imaginary) / (CN2.real * CN2.real + CN2.imaginary * CN2.imaginary);
-	quote.imaginary = (imaginary * CN2.real - real * CN2.imaginary) / (CN2.real * CN2.real + CN2.imaginary * CN2.imaginary);
-	if (quote.imaginary < 0)
+	quote.Real = (Real * CN2.Real + Imaginary * CN2.Imaginary) / (CN2.Real * CN2.Real + CN2.Imaginary * CN2.Imaginary);
+	quote.Imaginary = (Imaginary * CN2.Real - Real * CN2.Imaginary) / (CN2.Real * CN2.Real + CN2.Imaginary * CN2.Imaginary);
+	if (quote.Imaginary < 0)
 	{
-		quote.imaginary = -quote.imaginary;
-		cout << "Quotient of 2 inputted complex number is:	" << quote.real << " - " << quote.imaginary << "i." << endl;
+		quote.Imaginary = -quote.Imaginary;
+		cout << "Quotient of 2 inputted complex number is:	" << quote.Real << " - " << quote.Imaginary << "i." << endl;
 	}
 	else
-		cout << "Quotient of 2 inputted complex number is:	" << quote.real << " + " << quote.imaginary << "i." << endl;
+		cout << "Quotient of 2 inputted complex number is:	" << quote.Real << " + " << quote.Imaginary << "i." << endl;
 }

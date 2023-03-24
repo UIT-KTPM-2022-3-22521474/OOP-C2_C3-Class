@@ -19,7 +19,7 @@ int main()
 	int LastDateOfMonth;
 	InpDate.InputD(LastDateOfMonth);
 	InpDate.FollowingDate(NextDate, LastDateOfMonth);
-	return 1206;
+	return 0;
 }
 
 void CGregorianDate::InputD(int& LastDateOfMonth)

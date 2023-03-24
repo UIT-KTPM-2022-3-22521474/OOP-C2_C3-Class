@@ -6,8 +6,8 @@ int GCD(int, int);
 class CFraction
 {
 private:
-	int numerator;
-	int denominator;
+	int Numerator;
+	int Denominator;
 public:
 	void InputF();
 	void Irreducible();
@@ -25,7 +25,7 @@ int main()
 	F2.InputF();
 	F2.Irreducible();
 	F1.MaxFraction(F2);
-	return 1206;
+	return 0;
 }
 
 int GCD(int n1, int n2)
@@ -38,62 +38,62 @@ int GCD(int n1, int n2)
 void CFraction::InputF()
 {
 	cout << "\nEnter the numerator: ";
-	cin >> numerator;
+	cin >> Numerator;
 	cout << "Enter the denominator: ";
-	cin >> denominator;
-	while (denominator == 0)
+	cin >> Denominator;
+	while (Denominator == 0)
 	{
 		cout << "The denominator must be an integer other than 0. Please re-enter the denominator." << endl;
 		cout << "Enter the denominator: ";
-		cin >> denominator;
+		cin >> Denominator;
 	}
 }
 
 void CFraction::Irreducible()
 {
-	int gcd = GCD(numerator, denominator);
-	numerator /= gcd;
-	denominator /= gcd;
+	int gcd = GCD(Numerator, Denominator);
+	Numerator /= gcd;
+	Denominator /= gcd;
 }
 void CFraction::MaxFraction(CFraction F2)
 {
 	double f1, f2;
-	f1 = (double)numerator / denominator;
-	f2 = (double)F2.numerator / F2.denominator;
+	f1 = (double)Numerator / Denominator;
+	f2 = (double)F2.Numerator / F2.Denominator;
 	if (f1 > f2)
 		if (f1 == (int)f1)
 			cout << "\nThe biggest fraction is the first fraction which equals to " << f1 << "." << endl;
 		else
 		{
-			if (denominator < 0)
+			if (Denominator < 0)
 			{
-				numerator = -numerator;
-				denominator = -denominator;
+				Numerator = -Numerator;
+				Denominator = -Denominator;
 			}
-			cout << "\nThe biggest fraction is the first fraction which equals to " << numerator << "/" << denominator << "." << endl;
+			cout << "\nThe biggest fraction is the first fraction which equals to " << Numerator << "/" << Denominator << "." << endl;
 		}
 	if (f1 < f2)
 		if (f2 == (int)f2)
 			cout << "\nThe biggest fraction is the second fraction which equals to " << f2 << "." << endl;
 		else
 		{
-			if (F2.denominator < 0)
+			if (F2.Denominator < 0)
 			{
-				F2.numerator = -F2.numerator;
-				F2.denominator = -F2.denominator;
+				F2.Numerator = -F2.Numerator;
+				F2.Denominator = -F2.Denominator;
 			}
-			cout << "\nThe biggest fraction is the second fraction which equals to " << F2.numerator << "/" << F2.denominator << "." << endl;
+			cout << "\nThe biggest fraction is the second fraction which equals to " << F2.Numerator << "/" << F2.Denominator << "." << endl;
 		}
 	if (f1 == f2)
 		if (f1 == (int)f1)
 			cout << "\nTwo inputted fractions have equal values which equals to " << f1 << "." << endl;
 		else
 		{
-			if (denominator < 0)
+			if (Denominator < 0)
 			{
-				numerator = -numerator;
-				denominator = -denominator;
+				Numerator = -Numerator;
+				Denominator = -Denominator;
 			}
-			cout << "\nTwo inputted fractions have equal values which equals to " << numerator << "/" << denominator << "." << endl;
+			cout << "\nTwo inputted fractions have equal values which equals to " << Numerator << "/" << Denominator << "." << endl;
 		}	
 }

@@ -6,9 +6,10 @@ using namespace std;
 
 class CPoint
 {
-public:
+private:
 	int x;
 	int y;
+public:
 	void InputCP();
 };
 class CCircle
@@ -30,7 +31,7 @@ int main()
 	C.InputC();
 	C.Circumference();
 	C.Area();
-	return 1206;
+	return 0;
 }
 
 void CPoint::InputCP()
@@ -51,10 +52,10 @@ void CCircle::InputC()
 void CCircle::Circumference()
 {
 	double c = 2 * M_PI * R;
-	cout << "\nThe circumference of the circle is:	" << setprecision(6) << c << ".";
+	cout << "\nThe circumference of the circle is:	" << setw(6) <<  setprecision(6) << c << ".";
 }
 void CCircle::Area()
 {
 	double s = M_PI* pow(R, 2);
-	cout << "\nThe area of the circle is:		" << setprecision(6) << s << "." << endl;
+	cout << "\nThe area of the circle is:		" << setw(6) << setprecision(6) << s << "." << endl;
 }

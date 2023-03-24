@@ -18,7 +18,7 @@ int main()
 	CGregorianDate InpDate{}, PrevDate{};
 	InpDate.InputD();
 	InpDate.PreviousDate(PrevDate);
-	return 1206;
+	return 0;
 }
 
 void CGregorianDate::InputD()
