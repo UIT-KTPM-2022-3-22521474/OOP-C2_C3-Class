@@ -15,15 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Bai09.cpp">
+    <ClCompile Include="Bai10.08.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CPoint.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CCircle.h">
+    <ClInclude Include="CMonomial.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

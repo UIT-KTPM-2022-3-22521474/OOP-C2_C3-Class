@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f5187f2d-2e1e-4d5d-aea7-d999713cee3b}</ProjectGuid>
-    <RootNamespace>Bai03</RootNamespace>
+    <ProjectGuid>{e90d31f2-9c2e-4ae3-9c57-eb071dfbff28}</ProjectGuid>
+    <RootNamespace>Bai1008</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,10 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Bai03.cpp" />
+    <ClCompile Include="Bai10.08.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CFraction.h" />
+    <ClInclude Include="CMonomial.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
