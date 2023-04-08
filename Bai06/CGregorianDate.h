@@ -34,7 +34,7 @@ void CGregorianDate::InputD(int& LastDateOfMonth)
 		break;
 	default: LastDateOfMonth = 0;
 	}
-	if (LastDateOfMonth == 0 || YYYY < 1 || (LastDateOfMonth != 0 && (DD > LastDateOfMonth || DD < 1)))
+	while (LastDateOfMonth == 0 || YYYY < 1 || (LastDateOfMonth != 0 && (DD > LastDateOfMonth || DD < 1)))
 	{
 		cout << "\nInvalid date. Please re-enter the date." << endl;
 		InputD(LastDateOfMonth);

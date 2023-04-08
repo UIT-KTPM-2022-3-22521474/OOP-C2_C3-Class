@@ -42,7 +42,7 @@ void CGregorianDate::InputD()
 			DateInMonth = 28;
 		break;
 	}
-	if (DateInMonth == 0 || YYYY < 1 || (DateInMonth != 0 && (DD > DateInMonth || DD < 1)))
+	while (DateInMonth == 0 || YYYY < 1 || (DateInMonth != 0 && (DD > DateInMonth || DD < 1)))
 	{
 		cout << "\nInvalid date. Please re-enter the date." << endl;
 		InputD();
@@ -83,12 +83,12 @@ void CGregorianDate::PreviousDate(CGregorianDate PrevDate)
 		}
 		case 3:
 		{
+			PrevDate.MM = MM - 1;
+			PrevDate.YYYY = YYYY;
 			if (PrevDate.CheckLeapYear() == true)
 				PrevDate.DD = 29;
 			else
-				PrevDate.DD = 28;
-			PrevDate.MM = MM - 1;
-			PrevDate.YYYY = YYYY;
+				PrevDate.DD = 28;			
 			break;
 		}
 		}
